@@ -16,7 +16,6 @@ public class Program
             });
             
             var builder = WebApplication.CreateBuilder(args);
- 
              builder.Logging.AddDbLogger(options =>
             {
                 builder.Configuration.GetSection("Logging").GetSection("Database").GetSection("Options").Bind(options);

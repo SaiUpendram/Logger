@@ -1,25 +1,20 @@
 public class DbLogger : ILogger
 {
-   
     private readonly DbLoggerProvider _dbLoggerProvider;
- 
     
     public DbLogger([NotNull] DbLoggerProvider dbLoggerProvider)
     {
         _dbLoggerProvider = dbLoggerProvider;
     }
- 
     public IDisposable BeginScope<TState>(TState state)
     {
         return null;
     }
- 
     
     public bool IsEnabled(LogLevel logLevel)
     {
         return logLevel != LogLevel.None;
     }
- 
  
     
     public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)

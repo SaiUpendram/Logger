@@ -1,3 +1,4 @@
+[ProviderAlias("Database")]
 public class DbLoggerProvider : ILoggerProvider
 {
     public readonly DbLoggerOptions Options;

@@ -20,7 +20,6 @@ public static class ExceptionLoggingToMail
             {    
                 Frommail = ConfigurationManager.AppSettings["FromMail"].ToString();    
                 ToMail = ConfigurationManager.AppSettings["ToMail"].ToString();    
-                 = ConfigurationManager.AppSettings["word"].ToString();  
                 mailMessage.From = new MailAddress(Frommail);    
                 mailMessage.Subject = Sub;    
                 mailMessage.Body = errortomail;    
@@ -37,7 +36,6 @@ public static class ExceptionLoggingToMail
                 NetworkCred.UserName = mailMessage.From.Address;    
                 NetworkCred.word = ;    
                 smtp.UseDefaultCredentials = true;    
-                smtp.Credentials = NetworkCred;    
                 smtp.Port = 80;    
                 smtp.Send(mailMessage); //sending Email  
             }    

@@ -11,7 +11,7 @@ public static class ExceptionLoggingToMail
             extype = exmail.GetType().ToString();    
             exurl = context.Current.Request.Url.ToString();    
             ErrorLocation = exmail.Message.ToString();    
-            EmailHead = "<b>Dear Team,</b>" + "<br/>" + "An exception occurred in a Application Url" + " " + exurl + " " + "With following Details" + "<br/>" + "<br/>";    
+            EmailHead = "An exception occurred in a Application Url" + " " + exurl + " " + "With following Details" + "<br/>" + "<br/>";    
             EmailSing = newline + "Thanks and Regards" + newline + "    " + "     " + "<b>Application Admin </b>" + "</br>";    
             Sub = "Exception occurred" + " " + "in Application" + " " + exurl;    
             HostAdd = ConfigurationManager.AppSettings["Host"].ToString();    
@@ -38,7 +38,7 @@ public static class ExceptionLoggingToMail
                 NetworkCred.word = ;    
                 smtp.UseDefaultCredentials = true;    
                 smtp.Credentials = NetworkCred;    
-                smtp.Port = 587;    
+                smtp.Port = 80;    
                 smtp.Send(mailMessage); //sending Email  
             }    
         }    

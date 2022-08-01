@@ -12,7 +12,6 @@ public class DbLoggerProvider : ILoggerProvider
     {
         return new DbLogger(this);
     }
- 
     public void Dispose()
     {
     }

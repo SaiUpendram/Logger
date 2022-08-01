@@ -5,5 +5,7 @@ public static class DbLoggerExtensions
         builder.Services.AddSingleton<ILoggerProvider, DbLoggerProvider>();
         builder.Services.Configure(configure);
         return builder;
+        
+        
     }
 }

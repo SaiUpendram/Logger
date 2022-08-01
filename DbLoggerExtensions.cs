@@ -6,6 +6,5 @@ public static class DbLoggerExtensions
         builder.Services.Configure(configure);
         return builder;
         
-        
     }
 }
